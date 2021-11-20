@@ -1,0 +1,293 @@
+/* Generales (Aplican a Los tres archivos html) */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html, body {
+    height: 100%;
+    background-color: #144f58;
+    background-image: url("data:image/svg+xml,%3Csvg width='6' height='6' viewBox='0 0 6 6' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23c9f5f5' fill-opacity='0.11' fill-rule='evenodd'%3E%3Cpath d='M5 0h1L0 6V5zM6 5v1H5z'/%3E%3C/g%3E%3C/svg%3E");
+    font-family:'Courier New', Courier, monospace;
+    color: #c9f5f5;
+}
+
+/* Fin de estilos Generales */
+
+/* ------------------------------------------------------------ */
+
+/* Comienzo de estilos específicos para index.html */
+
+.main-index {
+    height: 100%;
+}
+
+.inicial {
+    width: 100%;
+    background-color: #145f68ff;
+}
+
+a {
+    text-decoration: none;
+    color: #c9f5f5;
+}
+
+.nav-inicial {
+    font-size: 1rem;
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    height: 2rem;
+    padding: 1.5rem;
+}
+
+.nav-inicial ul {
+    display: flex;
+    list-style: none;
+}
+
+.nav-inicial ul li {
+    padding: 1rem;
+}
+
+.second {
+    display: flex;
+    background-color: #fafafa;
+    color: #010101;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.second h2 {
+    margin-right: 50%;
+}
+
+.img-main {
+    width: 8rem;
+    margin: 1rem;
+}
+
+.imag {
+    display: flex;
+    width: 100%;
+    height: 70%;
+    align-items: center;
+    text-align: center;
+    color: #fff;
+}
+
+span {
+    font-style: italic;
+}
+
+.tird {
+    background: url(Images/imagen1.jpg) no-repeat center center/cover;    
+}
+
+.imag h2 {
+    width: 100%;
+    padding: 2rem;
+    background-color: #000000cc;
+}
+
+.nav-menu {
+    font-size: 1rem;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    height: 2rem;
+    padding: 1.5rem;
+}
+
+.nav-menu ul {
+    display: flex;
+    list-style: none;
+}
+
+.nav-menu ul li {
+    padding: 2rem;
+    cursor: pointer;
+}
+
+.nav-menu ul li a:hover {
+    border-bottom: 2px solid #010101;
+}
+
+.detail {
+    display: flex;
+    width: 100%;
+    height: 50%;
+    justify-content: center;
+    align-items: center;
+    background-color: #aafefa88;
+}
+
+.box-one, .box-two, .box-three {
+    width: 30%;
+    height: 90%;
+    margin: 2.5%;
+    border-radius: .3rem;
+    display: flex;
+    align-items: center;
+    text-align: center;
+}
+
+.detail a {
+    background-color: #ffffffff;
+    color: #000;
+    margin: 1rem;
+    padding: 1rem 0;
+    border-radius: .5rem;
+}
+
+
+.box-one {
+    background: url(Images/imagen2.png) no-repeat center center/cover;
+    opacity: .9;
+}
+
+.box-two {
+    background: url(Images/imagen3.png) no-repeat center center/cover;
+    opacity: .9;
+}
+
+.box-three {
+    background: url(Images/imagen4.png) no-repeat center center/cover;
+    opacity: .9;
+}
+
+.separador {
+    width: 95%;
+    margin: 2.5%;
+    text-align: center;
+}
+
+.separador h4 {
+    display: flexbox;
+}
+
+.separador hr {
+    margin: .5rem 0;
+}
+
+.news-prod {
+    display: flex;
+    width: 100%;
+    height: 30%;
+    justify-content: center;
+    align-items: center;
+    background-color: #fafafa;
+}
+
+.sbox-one, .sbox-two, .sbox-three, .sbox-four {
+    width: 21%;
+    height: 90%;
+    margin: 4%;
+    border-radius: .3rem;
+    display: flex;
+    align-items: center;
+    text-align: center;
+}
+
+.news-prod a {
+    background-color: #ffffffff;
+    color: #000;
+    margin: auto;
+    padding: 1rem;
+    font-weight: bolder;
+    border-radius: .5rem;
+}
+
+
+.sbox-one {
+    background: url(Images/gpu.png) no-repeat center center/cover;
+    opacity: .9;
+}
+
+.sbox-two {
+    background: url(Images/placa.png) no-repeat center center/cover;
+    opacity: .9;
+}
+
+.sbox-three {
+    background: url(Images/auri.png) no-repeat center center/cover;
+    opacity: .9;
+}
+
+.sbox-four {
+    background: url(Images/alta.png) no-repeat center center/cover;
+    opacity: .9;
+}
+
+footer {
+    background-color: #739f98;
+    color: #010101;
+    font-weight: bolder;
+    text-align: center;
+    padding: 1.5rem;
+}
+/* Fin de estilos específicos para index.html */
+
+/* ------------------------------------------------------------ */
+
+/* Comienzo de estilos específicos para secOne.html */
+.QuienesSomos{
+    display: flex;
+    width: 100%;
+    height: 70%;
+    align-items: center;
+    text-align: justify;
+    color: #00000088; 
+    background-color: #ffffffcc;
+    padding: 2rem 5rem;
+}
+.main-secOne {
+    height: 100%;
+}
+
+/* Fin de estilos específicos para secOne.html */
+
+/* ------------------------------------------------------------ */
+
+/* Comienzo de estilos específicos para secTwo.html */
+
+.soporte {
+    padding: 3rem;
+    background-color: #38413ebb;
+    border: 1px solid #000;
+    width: 50%;
+    margin: 3rem 25%; 
+    border-radius: 1rem;
+    display: flexbox;
+}
+
+.in-input {
+    border-radius: .3rem;
+    padding: .5rem;
+    text-align: left;
+    width: 100%;
+}
+
+.mensaje {
+    padding: 3rem;
+}
+
+.label {
+    display: block;
+    margin-bottom: 1rem;
+}
+
+.form-control {
+    padding: .5rem;
+}
+
+.boton{
+    border: 10px;
+    background-color: #c9f5f5;
+    color: #010101;
+    padding: 1rem 3rem;
+    border-radius: 1rem;
+}
+/* Fin de estilos específicos para secTwo.html */
