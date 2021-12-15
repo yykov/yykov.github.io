@@ -1,3 +1,13 @@
+:root {
+    --color-fondo-modo-oscuro1: #292929;
+    --color-fondo-modo-oscuro2: #006658;
+    --color-fondo-modo-claro1: #c5f8ff33;
+    --color-fondo-modo-claro2: #8f00bbee;
+    --color-font-claro: #ffffff;
+    --color-font-dark: #ffffff;
+    --color-link-modo-dar: #00ffff;
+}
+
 /* Generales (Aplican a Los tres archivos html) */
 
 * {
@@ -6,13 +16,28 @@
     padding: 0;
 }
 
-html, body {
+html {
     height: 100%;
-    background-color: #144f58;
+    width: 100%;
+}
+
+body {
+    height: 100%;
+    width: 100%;
+    min-width: 900px;
+    background-color: var(--color-fondo-modo-claro1);
     background-image: url("data:image/svg+xml,%3Csvg width='6' height='6' viewBox='0 0 6 6' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23c9f5f5' fill-opacity='0.11' fill-rule='evenodd'%3E%3Cpath d='M5 0h1L0 6V5zM6 5v1H5z'/%3E%3C/g%3E%3C/svg%3E");
     font-family:'Courier New', Courier, monospace;
-    color: #c9f5f5;
+    color: var(--color-font-claro);
+    transition: .3s ease all;
 }
+
+body.dark {
+    background-color: var(--color-fondo-modo-oscuro1);
+    color: var(--color-font-dark);
+}
+
+
 
 /* Fin de estilos Generales */
 
@@ -21,17 +46,38 @@ html, body {
 /* Comienzo de estilos específicos para index.html */
 
 .main-index {
+    width: 100%;
     height: 100%;
+    color: var(--color-font-claro);
+}
+
+body.dark .main-index {
+    background-color: var(--color-fondo-modo-oscuro1);
+    color: var(--color-font-dark);
 }
 
 .inicial {
     width: 100%;
-    background-color: #145f68ff;
+    background-color: var(--color-fondo-modo-claro2);
+    transition: .3s ease all;
+}
+
+body.dark .inicial {
+    background-color: var(--color-fondo-modo-oscuro2);
 }
 
 a {
     text-decoration: none;
-    color: #c9f5f5;
+    color: var(--color-font-claro);
+    transition: .3s ease all;
+}
+
+body.dark a {
+    color: var(--color-font-dark);
+}
+
+body.dark a:hover {
+    color: var(--color-link-modo-dar);
 }
 
 .nav-inicial {
@@ -54,51 +100,277 @@ a {
 
 .second {
     display: flex;
-    background-color: #fafafa;
+    width: 100%;
+    background-color: var(--color-fondo-modo-claro1);
     color: #010101;
     justify-content: space-between;
     align-items: center;
+    transition: .3s ease all;
+}
+
+body.dark .second {
+    background-color: var(--color-fondo-modo-oscuro1);
+    color: var(--color-font-dark);
 }
 
 .second h2 {
-    margin-right: 50%;
+    width: 40%;
+    margin: 0 1% 0 1%;
 }
+
+.search {
+    width: 30%;
+    height: 4%;
+    border: 1px solid;
+    border-radius: 1rem;
+    margin: 0 5% 0 1%;
+    padding: .25rem 5rem .25rem .25rem;
+}
+
+/* Carrito de compras */
+.shop-cart {
+    background-color: var(--color-fondo-modo-claro1);
+    margin: 0 5% 0 1%;
+    border-radius: 2rem;
+    border: none;
+    position: relative;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    outline: none;
+    padding: 1rem;
+}
+
+.shop-cart::after {
+    content: "";
+    display: block;
+    width: 2rem;
+    height: 2rem;
+    position: absolute;
+    background: url(Images/shopping-cart.svg) no-repeat center center/cover;
+    background-color: var(--color-fondo-modo-claro1);
+    left: 0;
+    border-radius: 0;
+    transition: .3s ease all;
+}
+
+.shop-cart.active {
+    background-color: var(--color-fondo-modo-oscuro1);
+       
+}
+
+.shop-cart.active::after {
+    background: url(Images/shopping-cart-dark.svg) no-repeat center center/cover;
+    border: none;
+    box-shadow: none;
+}
+
+.shop-cart.cart-active {
+    background-color: var(--color-fondo-modo-oscuro1);
+       
+}
+
+.shop-cart.cart-active::after {
+    background: url(Images/shopping-cart.svg) no-repeat center center/cover;
+    margin: 1rem;
+    border: none;
+    box-shadow: none;
+}
+
+/* Botón profile */
+.profile {
+    background-color: var(--color-fondo-modo-claro1);
+    margin: 0 5% 0 1%;
+    border-radius: 2rem;
+    border: none;
+    position: relative;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    outline: none;
+    padding: 1rem;
+}
+
+.profile::after {
+    content: "";
+    display: block;
+    width: 2rem;
+    height: 2rem;
+    position: absolute;
+    background: url(Images/user.svg) no-repeat center center/cover;
+    background-color: var(--color-fondo-modo-claro1);
+    left: 0;
+    border-radius: 0;
+    transition: .3s ease all;
+}
+
+.profile.active {
+    background-color: var(--color-fondo-modo-oscuro1);
+       
+}
+
+.profile.active::after {
+    background: url(Images/user-dark.svg) no-repeat center center/cover;
+    border: none;
+    box-shadow: none;
+}
+
+.profile.pro-active {
+    background-color: var(--color-fondo-modo-oscuro1);
+       
+}
+
+.profile.pro-active::after {
+    background: url(Images/user.svg) no-repeat center center/cover;
+    margin: 1rem;
+    border: none;
+    box-shadow: none;
+}
+
+/* Botón de modos claro/oscuro */
+.switch {
+    background-color: var(--color-fondo-modo-claro1);
+    margin: 0 5% 0 1%;
+    border-radius: 2rem;
+    border: none;
+    position: relative;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    outline: none;
+    padding: 1rem;
+}
+
+.switch::after {
+    content: "";
+    display: block;
+    width: 2rem;
+    height: 2rem;
+    position: absolute;
+    background: url(Images/moon.svg) no-repeat center center/cover;
+    background-color: var(--color-fondo-modo-claro1);
+    left: 0;
+    border-radius: 100px;
+    transition: .3s ease all;
+    box-shadow: 0 0 2px 2px rgba(0, 0, 0, .2);
+}
+
+.switch.active {
+    background-color: var(--color-fondo-modo-oscuro1);
+       
+}
+
+.switch.active::after {
+    background: url(Images/sun.svg) no-repeat center center/cover;
+    margin: 1rem;
+    border: none;
+    box-shadow: none;
+}
+
+/* Fin de estilo del botón*/
 
 .img-main {
     width: 8rem;
     margin: 1rem;
+    transition: .3s ease all;
 }
 
-.imag {
+body.dark .img-main {
+    border-radius: 1rem;
+}
+
+/* Slider Inicial */
+.container-slider {
+    width: 100%;
+    min-width: 900px;
+    margin: auto;
+    border-bottom: .10rem solid #7777aa55;
+    box-shadow: 0 .5rem 10px #00ffff;
+    overflow: hidden;
+    position: relative;   
+}
+
+.slider {
     display: flex;
+    width: 400%;
+    height: 600px;
+    margin-left: -100%;
+}
+
+.slider__section{
     width: 100%;
-    height: 70%;
-    align-items: center;
+}
+
+.slider__img{
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+}
+
+.slider__frs {
+    position: absolute;
+    right: 0;
+    width: 100%;
+    height: 9rem;
+    top: 50%;
+    transform: translateY(-50%);
     text-align: center;
-    color: #fff;
-}
-
-span {
-    font-style: italic;
-}
-
-.tird {
-    background: url(Images/imagen1.jpg) no-repeat center center/cover;    
-}
-
-.imag h2 {
-    width: 100%;
+    font-size: 1.5rem;
+    font-weight: bolder;
     padding: 2rem;
     background-color: #000000cc;
 }
 
+.slider__frs span {
+    font-style: italic;
+}
+
+.slider__btn {
+    position: absolute;
+    width: 2rem;
+    height: 2rem;
+    top: 50%;
+    background-color: #00000000;
+    transform: translateY(-50%);
+    font-size: 2rem;
+    font-weight: bold;
+    text-align: center;
+    border-radius: 1rem;
+    font-family: monospace;
+    color: #444444ff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.slider__btn:hover {
+    color: var(--color-link-modo-dar);
+}
+
+.slider__btn--left {
+    left: .75rem;
+}
+
+.slider__btn--right {
+    right: .75rem;
+}
+
 .nav-menu {
+    background-color: var(--color-fondo-modo-claro2);
     font-size: 1rem;
+    margin: auto;
     display: flex;
     justify-content: left;
     align-items: center;
     height: 2rem;
     padding: 1.5rem;
+    transition: .3s ease all;
+}
+
+body.dark .nav-menu {
+    background-color: var(--color-fondo-modo-oscuro2);
 }
 
 .nav-menu ul {
@@ -117,29 +389,45 @@ span {
 
 .detail {
     display: flex;
+    margin-top: 2rem;
     width: 100%;
     height: 50%;
     justify-content: center;
     align-items: center;
-    background-color: #aafefa88;
+    background-color: var(--color-fondo-modo-claro);
+}
+
+body.dark .detail {
+    background-color: var(--color-fondo-modo-oscuro);
 }
 
 .box-one, .box-two, .box-three {
     width: 30%;
     height: 90%;
     margin: 2.5%;
+    border: 1px solid #000;
     border-radius: .3rem;
     display: flex;
     align-items: center;
     text-align: center;
+    transition: .3s ease all;
 }
 
 .detail a {
-    background-color: #ffffffff;
-    color: #000;
+    background-color: var(--color-font-claro);
+    color: var(--color-fondo-modo-oscuro1);
     margin: 1rem;
-    padding: 1rem 0;
+    padding: 1rem 2rem;
     border-radius: .5rem;
+}
+
+body.dark .detail a {
+    background-color: #000;
+    color: var(--color-font-dark);
+}
+
+body.dark .box-one, body.dark .box-two, body.dark .box-three {
+    border: 2px solid #fff;
 }
 
 
@@ -162,6 +450,7 @@ span {
     width: 95%;
     margin: 2.5%;
     text-align: center;
+    color: var(--color-fondo-modo-oscuro1);
 }
 
 .separador h4 {
@@ -172,13 +461,21 @@ span {
     margin: .5rem 0;
 }
 
+body.dark .separador {
+    color: var(--color-font-claro);
+}
+
 .news-prod {
     display: flex;
     width: 100%;
     height: 30%;
     justify-content: center;
     align-items: center;
-    background-color: #fafafa;
+    background-color: var(--color-fondo-modo-claro1);
+}
+
+body.dark .news-prod {
+    background-color: var(--color-fondo-modo-oscuro1);
 }
 
 .sbox-one, .sbox-two, .sbox-three, .sbox-four {
@@ -192,12 +489,16 @@ span {
 }
 
 .news-prod a {
-    background-color: #ffffffff;
+    background-color: var(--color-font-claro);
     color: #000;
     margin: auto;
     padding: 1rem;
     font-weight: bolder;
     border-radius: .5rem;
+}
+
+body.dark .news-prod a {
+    background-color: #000;
 }
 
 
@@ -221,73 +522,199 @@ span {
     opacity: .9;
 }
 
+
+
+/* Footer-start */
 footer {
-    background-color: #739f98;
-    color: #010101;
-    font-weight: bolder;
-    text-align: center;
-    padding: 1.5rem;
+    background-color: #111;
+    height: auto;
+    width: 100%;
+    font-family: 'Audiowide', cursive;
+    padding-top: 40px;
+    color: #fff;
+    margin-top: 3rem;
 }
+.footer-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+.footer-content p{
+    max-width: 500px;
+    margin: 10px auto;
+    line-height: 28px;
+    font-size: 14px;
+}
+
+.footer-content img {
+    width: 4rem;
+    border-radius: 1.5rem;
+}
+
+.social {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 1rem 0 2rem 0;
+}
+
+.social li{
+    margin: 0 2rem;
+}
+
+.social a{
+    text-decoration: none;
+    color: #fff;
+}
+
+.social a i{
+    font-size: 2rem;
+}
+
+.social a:hover i {
+    color: var(--color-link-modo-dar);
+}
+
+.footer-bottom {
+    background: #000;
+    width: 100%;
+    padding: 1rem 0;
+    text-align: center;
+    font-size: .85rem;
+}
+
+/* Footer-end */
+
+
+
 /* Fin de estilos específicos para index.html */
 
 /* ------------------------------------------------------------ */
 
-/* Comienzo de estilos específicos para secOne.html */
-.QuienesSomos{
-    display: flex;
-    width: 100%;
-    height: 70%;
-    align-items: center;
-    text-align: justify;
-    color: #00000088; 
-    background-color: #ffffffcc;
-    padding: 2rem 5rem;
-}
-.main-secOne {
-    height: 100%;
+/* Comienzo de estilos específicos para login.html */
+.header-login {
+    display: block;
+    text-align: center;
+    padding: 3rem 2rem 5rem;
+    color: var(--color-fondo-modo-oscuro1);
+    transition: .3s ease all;
 }
 
-/* Fin de estilos específicos para secOne.html */
+body.dark .header-login {
+    background-color: var(--color-fondo-modo-oscuro1);
+    color: var(--color-font-claro);
+}
+
+input {
+    color: var(--color-font-claro);
+    padding: 1rem auto;
+}
+
+.header-login h2 {
+    font-size: 1.3rem;
+}
+
+.container-login {
+    width: 70%;
+    height: 60%;
+    margin: auto;
+    text-align: center;
+    background-color: var(--color-fondo-modo-claro2);
+    color: var(--color-font-claro);
+    border-radius: 2rem;
+    padding: 2rem;
+    transition: .3s ease all;
+}
+
+body.dark .container-login {
+    background-color: var(--color-fondo-modo-oscuro2);
+}
+
+.container-login h3 {
+    padding: 1rem 0 2rem;
+}
+
+.container-login a {
+    color: #8888ff;
+    text-decoration: none;
+    display: inline-block;
+    margin: 3rem;
+}
+
+.container-two {
+    width: 70%;
+    margin: 5rem auto;
+    padding: 2rem;
+    text-align: center;
+    border-radius: 2rem;
+    background-color: var(--color-fondo-modo-claro2);
+}
+
+body.dark .container-two {
+    background-color: var(--color-fondo-modo-oscuro2);
+}
+
+.container-two a {
+    color: #8888ff;
+    text-decoration: none;
+}
+
+h1 {
+    font-weight: 800;
+}
+
+.image-main {
+    width: 50px;
+    background-color: #c9f5f5;
+    border-radius: 2rem;
+}
+
+.datos {
+    display: block;
+    padding: .5rem;
+}
+
+.input-main {
+    width: 70%;
+    background-color: #383e44;
+    border-style: solid;
+    border-radius: .3rem;
+    margin-bottom: .5rem;
+}
+
+.container-login .input-main:last-of-type {
+     margin-bottom: 3rem;
+}
+
+#boton {
+    width: 60%;
+    color: #141d25;
+    font-weight: bolder;
+    display: inline-block;
+    margin: 10% 20% 0 20%;
+    padding: .5rem;
+    border-radius: 1rem;
+    background-color: #c9f5f5;
+    cursor: pointer;
+}
+
+/* Fin de estilos específicos para login.html */
 
 /* ------------------------------------------------------------ */
 
-/* Comienzo de estilos específicos para secTwo.html */
+/* Comienzo de estilos específicos para profile.html */
 
-.soporte {
-    padding: 3rem;
-    background-color: #38413ebb;
-    border: 1px solid #000;
-    width: 50%;
-    margin: 3rem 25%; 
-    border-radius: 1rem;
-    display: flexbox;
+.img-main-profile {
+    width: 3rem;
+    margin: 1rem;
+    transition: .3s ease all;
 }
 
-.in-input {
-    border-radius: .3rem;
-    padding: .5rem;
-    text-align: left;
-    width: 100%;
-}
-
-.mensaje {
-    padding: 3rem;
-}
-
-.label {
-    display: block;
-    margin-bottom: 1rem;
-}
-
-.form-control {
-    padding: .5rem;
-}
-
-.boton{
-    border: 10px;
-    background-color: #c9f5f5;
-    color: #010101;
-    padding: 1rem 3rem;
+body.dark .img-main-profile {
     border-radius: 1rem;
 }
-/* Fin de estilos específicos para secTwo.html */
+/* Fin de estilos específicos para profile.html */

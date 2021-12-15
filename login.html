@@ -22,7 +22,6 @@
                 </ul>
             </nav>
         </div>
-
         <div class="second">
             <img src="Images/Imagenmain.jpeg" alt="Logo" class="img-main">
             <h2>Periféricos y componentes informáticos</h2>
@@ -33,7 +32,6 @@
             <a href="profile.html"class="profile" id="profile"></a>
             <button class="switch" id="switch"></button>
         </div>
-
         <div class="nav-menu">
             <nav>
                 <ul>
@@ -45,65 +43,25 @@
                 </ul>
             </nav>
         </div>
-        
-        <div class="container-slider">
-            <div class="slider" id="slider">
-                <div class="slider__section">
-                    <img src="Images/imagen2.jpg" alt="" class="slider__img">
-                </div>
-                <div class="slider__section">
-                    <img src="Images/imagen1.jpg" alt="" class="slider__img">
-                </div>
-                <div class="slider__section">
-                    <img src="Images/imagen3.jpg" alt="" class="slider__img">
-                </div>
-                <div class="slider__section">
-                    <img src="Images/imagen4.jpg" alt="" class="slider__img">
-                </div>
-                <div class="slider__frs">"La tecnología hizo posible las grandes poblaciones; ahora las grandes poblaciones hacen que la tecnología sea indispensable." <br> <span>José Krutch</span></div>
-                <div class="slider__btn slider__btn--left" id="btn-left">&#60;</div>
-                <div class="slider__btn slider__btn--right" id="btn-right">&#62;</div>
-            </div>
+        <header class="header-login">
+            <img src="Images/Imagenmain.jpeg" alt="Imagen Principal" class="image-main">
+            <h1>NewLand Technology</h1>
+        </header>
+
+        <div class="container-login">
+            <h3>Inicie Sesión en NT</h3>
+            <form action="" method="get" id="formulario">
+                    <label for="userid" class="datos">Usuario:</label>
+                    <input type="text" class="input-main" name="name_control" id="userid" autofocus required />
+                    <label for="id_control" class="datos">Contraseña:</label>
+                    <input type="password" class="input-main" name="ctr_control" id="id_control" autofocus required />
+                    <input type="submit" value="Iniciar Sesión" id="boton" onclick="success()">
+                    <a href="forgotpw.html">Olvidó su contraseña?</a>
+            </form>
         </div>
-
-        <section class="detail">
-            <div class="box-one">
-                <a href="#">Componentes para su PC a precios excelentes</a >
-                <!-- <button>Ver más</button> -->
-            </div>
-            <div class="box-two">
-                <a href="#">Procesadores, microcontroladores, tarjetas gráficas y demás</a >
-                <!-- <button>Ver más</button> -->
-            </div>
-            <div class="box-three">
-                <a href="#">Cables y Conectores para el montaje de su PC</a >
-                <!-- <button>Ver más</button> -->
-            </div>
-        </section>
-
-        <div class="separador">
-            <h4>Nuevos productos</h4>
-            <hr>
+        <div class="container-two">
+            <p>Aún no se ha registrado? <a href="register.html">Registrarse</a></p>
         </div>
-
-        <section class="news-prod">
-            <div class="sbox-one">
-                <a href="detail-product.html">Tarjeta Gráfica RTX </a >
-                <!-- <button>Ver más</button> -->
-            </div>
-            <div class="sbox-two">
-                <a href="#">Placa Base</a >
-                <!-- <button>Ver más</button> -->
-            </div>
-            <div class="sbox-three">
-                <a href="#">Auriculares</a >
-                <!-- <button>Ver más</button> -->
-            </div>
-            <div class="sbox-four">
-                <a href="#">Altavoces</a >
-                <!-- <button>Ver más</button> -->
-            </div>
-        </section>
 
         <footer>
             <div class="footer-content">
@@ -120,10 +78,6 @@
                 <p>&copy;copyright 2021 - NewLand Tecnology</p>
             </div>
         </footer>
-          
     </main>
-
-
-    <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script> -->
 </body>
 </html>
